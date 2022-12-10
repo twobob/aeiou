@@ -35,7 +35,7 @@ def blow_chunks(
     if norm in ['global','channel']:       
         audio_norm = normalize_audio(audio, norm)     
         gain_db = abs(get_dbmax(audio)) - abs(get_dbmax(audio_norm))   
-        print(f"normalized {new_filename} with type {norm} creating {gain_db[:4]}dB change ", flush=True)
+        print(f"normalized {new_filename} with type {norm} creating {gain_db}dB change ", flush=True)
         audio=audio_norm
 
     spacing = 0.5 if spacing == 0 else spacing # handle degenerate case as a request for the defaults
